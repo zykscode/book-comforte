@@ -1,5 +1,11 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/theme-provider";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -17,12 +23,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
+    <ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body >
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <main className="min-h-screen flex flex-col items-center">
+        <Header />
           {children}
+          <Footer />
         </main>
+        <Toaster />
+        </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
