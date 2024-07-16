@@ -13,6 +13,34 @@ const defaultUrl = process.env.VERCEL_URL
   : "http://localhost:3000";
 
 export const metadata = {
+  icons: [
+    {
+      rel: 'apple-touch-icon',
+      url: '/apple-touch-icon.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '64x64',
+      url: '/64.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/16.png',
+    },
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+    },
+  ],
   metadataBase: new URL(defaultUrl),
   title: "Next.js and Supabase Starter Kit",
   description: "The fastest way to build apps with Next.js and Supabase",
