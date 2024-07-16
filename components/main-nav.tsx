@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import * as React from 'react';
 import LargeScreenMenu from './big-menutoggle';
+import { MainNavItem } from '@/types';
 
 interface MainNavProps {
   items?: MainNavItem[];
