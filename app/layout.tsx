@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { MenuProvider } from "@/contexts/MenuContext";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <body >
       <ThemeProvider
@@ -32,15 +33,17 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <MenuProvider>
         <main className="min-h-screen flex flex-col items-center">
         <Header />
           {children}
           <Footer />
         </main>
+        </MenuProvider>
         <Toaster />
         </ThemeProvider>
       </body>
     </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }
