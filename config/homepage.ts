@@ -1,4 +1,4 @@
-import type { HomepageNavs } from '#/types';
+import { HomepageNavs } from "@/types";
 
 export const homepageNavs: HomepageNavs = {
   mainNav: [
