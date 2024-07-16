@@ -10,7 +10,7 @@ type PathProps = {
   props: any;
 };
 
-const Path = ({ isHovered, isClicked, ...props }: PathProps) => (
+const Path = ({ isHovered, isClicked, ...props }:any) => (
   <motion.path
     strokeWidth={isClicked ? '4' : '4'}
     className=" stroke-[#fdfdfd] dark:stroke-[#1a1a1a]"
