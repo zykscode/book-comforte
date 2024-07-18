@@ -35,7 +35,7 @@ export const Example = () => {
 
   return (
     <motion.nav
-      className="rounded-full flex justify-center items-center size-16 bg-yellow-900"
+      className="rounded-full flex justify-center items-center size-12 md:size-16 bg-yellow-900"
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
