@@ -4,8 +4,9 @@ import { Example } from "./Example";
 
 export default function Header() {
   return (
-    <header className="container bg-green-200 h-24 sticky top-0 z-40 backdrop-blur-sm ">
-<div className="justify-between h-24 500 flex items-center">      <Logo className={''}/>
+    <header className="w-full h-16 sticky top-0 z-40 backdrop-blur-sm ">
+<div className=" justify-between w-full bg-green-200 h-full 500 flex items-center">      
+  <Logo className={''}/>
 
 <Example /> 
 </div>

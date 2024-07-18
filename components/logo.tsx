@@ -4,7 +4,7 @@ import React from 'react';
 
 const Logo = ({ className, props }: any) => {
   return (
-    <Link href={'/'} className={`${className} h-24 w-24 `}>
+    <Link href={'/'} className={`${className} size-16 `}>
  <svg
     xmlns="http://www.w3.org/2000/svg"
     className=''

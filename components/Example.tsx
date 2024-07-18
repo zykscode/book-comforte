@@ -35,14 +35,13 @@ export const Example = () => {
 
   return (
     <motion.nav
-      className="flex bg-yellow-900 h-80"
+      className="rounded-full flex justify-center items-center size-16 bg-yellow-900"
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
     >
-      <motion.div className="absolute  opacity-100 bg-yellow-400 top-0 right-0 bottom-0 w-72 h-full" variants={sidebar} />
-    
+   
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

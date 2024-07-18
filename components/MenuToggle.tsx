@@ -14,7 +14,7 @@ const Path = (props: React.JSX.IntrinsicAttributes & SVGMotionProps<SVGPathEleme
 export const MenuToggle = ({ toggle }:any) => (
   <button
     onClick={toggle}
-    className="absolute top-4 right-4 w-12 h-12 rounded-full bg-transparent focus:outline-none"
+    className=" w-12 h-12 flex justify-center items-center rounded-full bg-green-300  focus:outline-none"
   >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path

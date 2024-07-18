@@ -35,11 +35,7 @@ export const metadata = {
       type: 'image/png',
       sizes: '16x16',
       url: '/16.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
+    }
   ],
   metadataBase: new URL(defaultUrl),
   title: "Next.js and Supabase Starter Kit",
