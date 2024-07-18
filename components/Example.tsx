@@ -35,8 +35,11 @@ export const Example = () => {
 
   return (
     <motion.nav
+    layout
       className="rounded-full flex justify-center items-center size-12 md:size-16 bg-yellow-900"
       initial={false}
+      style={{ height: isOpen ?  "1000px": "100%" }}
+      data-isOpen={isOpen}
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
